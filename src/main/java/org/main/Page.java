@@ -43,6 +43,9 @@ public class Page {
         whatInput.click();
         whatInput.sendKeys(jobName);
         whereInput.click();
+        if($x(CLEAR_LOCATION).exists()){
+            $x(CLEAR_LOCATION).click();
+        }
         whereInput.sendKeys(locationName);
 
         sleep(5000);
