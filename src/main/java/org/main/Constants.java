@@ -14,6 +14,6 @@ public class Constants {
     public final static String NEXT_PAGE_ELEMENT = "//a[@data-testid='pagination-page-next']";
     public final static String SELECT_POSTED_ELEMENT = "//button[@id='filter-dateposted']";
     public final static String MODAL_CLOSE_BUTTON = "//div[@aria-modal='true']//button[@aria-label='close']";
-    public final static Job FIRST_LINE = new Job("JOB_NAME", "JOB_COMPANY_NAME", "JOB_REGION", "JOB_LOCATION", "JOB_TEXT", "JOB_URL");
+    public final static Job FIRST_LINE = new Job("JOB_NAME", "JOB_COMPANY_NAME", "JOB_POSITION", "JOB_LOCATION", "JOB_TEXT", "JOB_URL");
 
 }

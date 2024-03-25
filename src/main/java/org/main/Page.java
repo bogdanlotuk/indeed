@@ -122,7 +122,7 @@ public class Page {
         PrintWriter out = new PrintWriter(csvFile);
 
         for(Job job : jobsWithUrl){
-            out.printf("%s, %s, %s, %s, %s, %s\n", job.getJobName(), job.getJobCompanyName(), job.getJobRegion(), job.getJobLocation(), job.getJobText(), job.getJobUrl());
+            out.printf("%s, %s, %s, %s, %s, %s\n", job.getJobName(), job.getJobCompanyName(), job.getJobPosition(), job.getJobLocation(), job.getJobText(), job.getJobUrl());
         }
 
         out.close();
