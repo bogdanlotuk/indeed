@@ -53,11 +53,15 @@ public class Page {
         sleep(5000);
     }
 
+    public void closeModal(){
+        if(modalCloseButton.isDisplayed()){
+            modalCloseButton.click();
+        }
+    }
+
     public void getLinksFromLists(){
         while(($$x(LIST_JOB_LINK).size() > 0) || modalCloseButton.isDisplayed()) {
-            if(modalCloseButton.isDisplayed()){
-                modalCloseButton.click();
-            }
+            closeModal();
 
             List<SelenideElement> itemsFromList = $$x(LIST_JOB_LINK);
             for (SelenideElement item : itemsFromList) {
@@ -79,6 +83,8 @@ public class Page {
     public void collectInfoFromTheLink(){
         for(String link : linksFromList){
             open(link);
+            closeModal();
+
             SelenideElement jobTitleElement = $x(JOB_TITLE_ELEMENT);
             String jobTitleName= jobTitleElement.text().replaceAll(","," / ").replaceAll("\\s+"," ");
             if($x(JOB_COMPANY_ELEMENT).exists()){
@@ -122,7 +128,7 @@ public class Page {
         PrintWriter out = new PrintWriter(csvFile);
 
         for(Job job : jobsWithUrl){
-            out.printf("%s, %s, %s, %s, %s, %s\n", job.getJobName(), job.getJobCompanyName(), job.getJobRegion(), job.getJobLocation(), job.getJobText(), job.getJobUrl());
+            out.printf("%s, %s, %s, %s, %s, %s\n", job.getJobName(), job.getJobCompanyName(), job.getJobPosition(), job.getJobLocation(), job.getJobText(), job.getJobUrl());
         }
 
         out.close();
