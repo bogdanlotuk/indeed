@@ -1,4 +1,4 @@
-package org.main;
+package org.indeed;
 
 public class Job {
     private String _jobName;
