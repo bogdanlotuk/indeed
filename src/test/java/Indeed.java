@@ -1,4 +1,4 @@
-import org.main.*;
+import org.indeed.Page;
 import org.testng.annotations.Test;
 
 import java.io.FileNotFoundException;
@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Indeed {
-    @Test public void test1() throws FileNotFoundException {
-        ArrayList<String> queryList = new ArrayList<>(Arrays.asList("autocad", "it support technician"));
+    @Test public void testIndeed() throws FileNotFoundException {
+        ArrayList<String> queryList = new ArrayList<>(Arrays.asList("autocad"));
         Page page = new Page();
         Page.locationName = "Calgary, AB";
         Page.selectDays = "Last 3 days";
