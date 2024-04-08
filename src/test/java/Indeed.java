@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Tests  {
+public class Indeed {
     @Test public void test1() throws FileNotFoundException {
         ArrayList<String> queryList = new ArrayList<>(Arrays.asList("autocad", "it support technician"));
         Page page = new Page();
